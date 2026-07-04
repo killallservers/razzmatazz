@@ -1,0 +1,43 @@
+{
+  "name": "@razzmatazz/core",
+  "version": "0.1.0",
+  "description": "Framework-agnostic terminal runtime with pure TypeScript diff engine",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geoffmiller/ratatat.git",
+    "directory": "packages/core"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "oxlint .",
+    "test": "bun test",
+    "preversion": "npm run build && git add ."
+  },
+  "dependencies": {
+    "eventemitter3": "^5.0.4"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.9.2"
+  }
+}

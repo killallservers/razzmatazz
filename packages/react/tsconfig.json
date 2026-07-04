@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "strict": true,
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "rootDir": "src",
+    "outDir": "dist",
+    "declaration": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    "types": ["bun"],
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "@razzmatazz/core": ["../core/dist/index.d.ts"],
+      "@razzmatazz/core/*": ["../core/dist/*.d.ts"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "__test__"],
+  "references": [
+    {
+      "path": "../core"
+    }
+  ]
+}

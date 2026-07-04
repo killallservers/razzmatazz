@@ -1,0 +1,13 @@
+# Bun configuration for Razzmatazz monorepo
+
+[bundle]
+# Inline all dependencies for single executable builds
+minify    = { syntax = true, whitespace = true }
+splitting = false
+
+[test]
+# Use Bun's native test runner
+timeout = 30000
+
+[env]
+dev = { define = { DEBUG = "true" } }
